@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Puzzle Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://img.freepik.com/premium-photo/learning-english-concept-square-letter-tiles-with-magnifying-glass-against-blue-background_665346-37485.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        #game-container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 50px auto;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: #FFD700; /* Golden color */
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        input {
+            width: 30px;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 8px;
+            font-size: 16px;
+            background-color: #4CAF50; /* Green color */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049; /* Darker green color on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div id="game-container">
+    <h1>Word Puzzle Game</h1>
+     <p> 
+       <b>Hint:</b> A programming language 
+     </p> 
+    <p id="wordDisplay"></p>
+    <p id="attemptsDisplay"></p>
+    <input type="text" id="guessInput" maxlength="1"><br><br>
+    <button id="enter" onclick="makeGuess()">Guess</button>
+</div>
+
+<script>
+    // Define the word to be guessed
+    var wordsToGuess = ["programming","Html","Flutter"];
+var wordIndex = 0;
+var wordToGuess = "";
+var guessedLetters = [];
+var attempts = 0,count=0;
+var timer;
+var input=document.getElementById("guessInput");
+input.addEventListener("keypress",function(event){
+	if(event.key==="Enter"){
+		event.preventDefault();
+		document.getElementById("enter").click();
+	}
+});
+
+function startGame() {
+    wordToGuess = wordsToGuess[wordIndex].toLowerCase();
+    guessedLetters = new Array(wordToGuess.length).fill('_');
+    attempts = 0;
+
+    updateDisplay();
+    updateTimer();
+
+    // Set a timer for 60 seconds
+    timer = setInterval(function () {
+        var timeElement = document.getElementById("time");
+        var timeLeft = parseInt(timeElement.innerText);
+        if (timeLeft > 0) {
+            timeLeft--;
+            timeElement.innerText = timeLeft;
+        } else {
+            clearInterval(timer);
+            endGame();
+        }
+    }, 1000);
+}
+
+function updateDisplay() {
+    document.getElementById("wordDisplay").innerHTML = "Word: " + guessedLetters.join(" ");
+    document.getElementById("attemptsDisplay").innerHTML = "Incorrect attempts: " + attempts;
+}
+
+function makeGuess() {
+    var guessInput = document.getElementById("guessInput").value.toLowerCase();
+    document.getElementById("guessInput").value = "";
+
+    if (guessInput.length !== 1 || !/[a-z]/.test(guessInput)) {
+        alert("Please enter a valid single letter.");
+        return;
+    }
+
+    var guess = guessInput.charAt(0);
+    var foundLetter = false;
+
+    for (var i = 0; i < wordToGuess.length; i++) {
+        if (wordToGuess.charAt(i) === guess) {
+            guessedLetters[i] = guess;
+            foundLetter = true;
+        }
+    }
+
+    if (!foundLetter) {
+        attempts++;
+        if (attempts >= 6) {
+            endGame();
+        }
+    } else {
+        if (guessedLetters.join("") === wordToGuess) {
+            clearInterval(timer);
+            alert("Congratulations! You won!");
+            count++;
+            nextWord();
+        }
+    }
+
+    updateDisplay();
+}
+
+function updateTimer() {
+    document.getElementById("time").innerText = "60";
+}
+
+function endGame() {
+    clearInterval(timer);
+    alert("You lost! The correct word was: " + wordToGuess);
+    nextWord();
+}
+
+function nextWord() {
+    wordIndex++;
+    if (wordIndex < wordsToGuess.length) {
+        startGame();
+    } else {
+        alert("Game Over! You have completed all words.YOUR SCORE IS "+count);
+    }
+}
+
+// Initial start of the game
+startGame();
+
+</script>
+
+</body>
+</html>

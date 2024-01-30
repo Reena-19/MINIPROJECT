@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funny Games Sign Up</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://img.freepik.com/premium-photo/learning-english-concept-square-letter-tiles-with-magnifying-glass-against-blue-background_665346-37485.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+  			background-size: cover;
+  			background-size: 100% 100%;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 25%;
+        }
+        h1 {
+            color: #333;
+        }
+        #game-image {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            background-color: blue;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Sign Up</h2>
+    <img id="game-image" width="80px" src="data:image/png;base64,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" alt="Funny Game Image">
+	<br><br>
+    <form method="post" action=RegisterServlet>
+        <label>E-mail ID: </label><input name="email" type="email" placeholder="Email" required><br>
+        <label>Password: </label><input name="pass" type="password" placeholder="Password" required><br>
+        <label>Name: </label><input name="name" type="text" placeholder="Username" required><br>
+        <label>Phone Number: </label><input name="phone" type="number" placeholder="Phone number" required><br>
+        <button type="submit">Sign Up</button>
+        <h5>Already have an account? Click</h5>
+   	  	<a href="Login.html"><h5>SIGN IN</h5></a>
+    </form>
+</div>
+</body>
+</html>
