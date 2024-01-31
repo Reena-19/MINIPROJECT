@@ -70,3 +70,12 @@ contribute to a well-crafted web-based word puzzle game
 ![image](https://github.com/Reena-19/MINIPROJECT/assets/138842205/9609b089-176c-4166-8df2-fa041f644a31)
 ![image](https://github.com/Reena-19/MINIPROJECT/assets/138842205/21600794-8fe4-461e-94c6-e1fe038f58fb)
 ![image](https://github.com/Reena-19/MINIPROJECT/assets/138842205/a7de95c3-99a9-45f6-ad05-c2251e6868b6)
+
+OUTPUT IMAGES:
+![WhatsApp Image 2024-01-30 at 12 46 07_4946aa83](https://github.com/Reena-19/MINIPROJECT/assets/138842205/7cc90763-26ff-4fb7-bf8d-5629d2240423)
+![WhatsApp Image 2024-01-30 at 12 46 53_f4b9a4c0](https://github.com/Reena-19/MINIPROJECT/assets/138842205/2d7717ea-51e7-4485-a317-e095ab0a7c4e)
+![WhatsApp Image 2024-01-30 at 12 47 43_472f30ff](https://github.com/Reena-19/MINIPROJECT/assets/138842205/15febc82-242b-4c3f-b55e-883219ed3835)
+![WhatsApp Image 2024-01-30 at 12 48 17_d2713106](https://github.com/Reena-19/MINIPROJECT/assets/138842205/dd0b8441-828d-4dca-8093-db3c74c90478)
+![WhatsApp Image 2024-01-30 at 12 49 08_2e139fb7](https://github.com/Reena-19/MINIPROJECT/assets/138842205/fba36ef3-9484-4b0c-ae97-bbca88eb6fca)
+![WhatsApp Image 2024-01-30 at 12 49 59_26233868](https://github.com/Reena-19/MINIPROJECT/assets/138842205/0277adb5-b9d4-4ef0-ba7d-e22b37859eb9)
+![WhatsApp Image 2024-01-30 at 12 50 52_487dec91](https://github.com/Reena-19/MINIPROJECT/assets/138842205/00a9cf79-06e1-42c0-bc09-e78254a84314)
