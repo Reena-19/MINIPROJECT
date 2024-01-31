@@ -1,6 +1,8 @@
 # MINIPROJECT 
+
 WORDPUZZLE
- ABSTRACT:
+
+ABSTRACT:
 	 Word puzzle games challenge players to think critically, expand their vocabulary, and enhance their cognitive abilities. Solving puzzles often requires problem-solving skills, 
 pattern recognition, and linguistic proficiency. Word puzzle games serve as a source of entertainment and relaxation. Players can engage in these games during leisure time to 
 unwind and have fun, whether alone or with friends. Word puzzle games offer educational value by promoting language skills, spelling, and word recognition.
